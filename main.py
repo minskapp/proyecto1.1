@@ -151,7 +151,7 @@ def mov_ordenador_facil(tablero, jugador):
             return casilla
 
 
-# Método que verifica si los extremos del tablero están vacíos
+# Método que verifica si los extremos del tablero están vacíos y retorna la casilla a jugar
 def extremos_vacios(tablero):
     if tablero[1] != " " and tablero[0] == " ":
         return 0
@@ -171,7 +171,8 @@ def cantidad_fichas_tablero(tablero):
     return cantidad
 
 # Método que retorna la posición de una ficha en el tablero, el parámetro "casillas" solo sirve en caso que sea
-# distinto de cero, y sirve para buscar solo en casillas específicas la ficha de un jugador en el tablero
+# distinto de cero, y sirve para buscar solo en casillas específicas la ficha de un jugador en el tablero, en caso
+# contrario, se busca la ficha en todo el tablero sin distinción
 def encontrar_ficha(tablero, casillas, jugador):
     if casillas == 0:
         return tablero.index(jugador)
